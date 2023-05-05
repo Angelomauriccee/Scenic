@@ -142,8 +142,8 @@ li {
 }
 .banner .slider_navigation {
   z-index: 11;
-  position: fixed;
-  bottom: 12.5rem;
+  position: absolute;
+  bottom: 17.5rem;
   right: 0;
   width: -moz-max-content;
   width: max-content;
@@ -151,6 +151,11 @@ li {
   gap: 1.25rem;
   width: 12.5rem;
   aspect-ratio: 1;
+}
+@media screen and (min-width: 64em) {
+  .banner .slider_navigation {
+    bottom: 0;
+  }
 }
 .banner .slider_navigation .nav-btn {
   position: relative;
@@ -250,8 +255,7 @@ li {
 .banner__hero {
   display: grid;
   place-content: center;
-  margin-top: 9.375rem;
-  margin-bottom: auto;
+  margin-top: 2.5rem;
 }
 @media screen and (min-width: 64em) {
   .banner__hero {
