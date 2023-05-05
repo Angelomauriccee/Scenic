@@ -4,9 +4,11 @@
     .nav_menu{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.671);
-    top: 0;
-    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
     clip-path: circle(0.0% at 50% 50%);
+    inset: 0 0 0 0;
     transition: 0.5s all ease-in;
         .close_nav{
             transition: 0.5s ease-in;
@@ -23,7 +25,10 @@
             transform: translate(-50%, -50%);
             text-align: center;
             background-color: #ffffff;
-            padding: u.rem(50) u.rem(170) u.rem(30) u.rem(170);
+            padding: u.rem(50) u.rem(100) u.rem(30) u.rem(100);
+            @include u.breakpoint(large){
+                padding: u.rem(50) u.rem(170) u.rem(30) u.rem(170);
+            }
             border-radius: 3px;
     
             li{
@@ -44,5 +49,6 @@
         width: 100vw;
         height: 100vh;
         clip-path: circle(70.7% at 50% 50%);
+        inset: 0 0 0 0;
     }
 }

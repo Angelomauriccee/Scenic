@@ -31,8 +31,8 @@
     }
     .slider_navigation{
         z-index: 11;
-        position: absolute;
-        bottom: 0;
+        position: fixed;
+        bottom: u.rem(200);
         right: 0;
         width: max-content;
         display: flex;
@@ -158,7 +158,8 @@
     &__hero{
         display: grid;
         place-content: center;
-        margin-top: u.rem(40);
+        margin-top:u.rem(150);
+        margin-bottom: auto;
         @include u.breakpoint(large){
             width: 100vw;
         }
