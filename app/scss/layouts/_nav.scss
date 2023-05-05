@@ -1,0 +1,48 @@
+@use '../util' as u;
+.nav{
+    
+    .nav_menu{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.671);
+    top: 0;
+    left: 0;
+    clip-path: circle(0.0% at 50% 50%);
+    transition: 0.5s all ease-in;
+        .close_nav{
+            transition: 0.5s ease-in;
+            position: absolute;
+            right: u.rem(20);
+            top: u.rem(20);
+            cursor: pointer;
+        }
+        .navigation_menu{
+            transition: 0.5s ease-in;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #ffffff;
+            padding: u.rem(50) u.rem(170) u.rem(30) u.rem(170);
+            border-radius: 3px;
+    
+            li{
+                margin: u.rem(25) 0;
+            }
+            a{
+                font-size: u.rem(16);
+                font-weight: 700;
+                transition: 0.5s;
+            }
+            a:is(:active, :focus-visible, :hover){
+                color: #2696E9;
+            }
+        }
+    }
+    .nav_menu.active{
+        transition: 0.5s all ease-in;
+        width: 100vw;
+        height: 100vh;
+        clip-path: circle(70.7% at 50% 50%);
+    }
+}
